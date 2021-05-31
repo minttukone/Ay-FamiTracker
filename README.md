@@ -1,3 +1,11 @@
+# Ay-FamiTracker
+Ay-FamiTracker is a fork of Dn-FamiTracker that allows you to make AY-3 music. The name "Ay" comes from the PSG called AY-3-8910
+WARNING: This is updated rarely. Do not expect any updates often.
+
+## TODO
+- Add .ay export
+
+
 <img src="docs/dn logo.svg">
 
 Dn-Famitracker is a fork of 0CC-FamiTracker that incorporates numerous fixes and features. The meaning of the name "Dn" is whatever you wish it to be.
