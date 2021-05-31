@@ -29,14 +29,14 @@
 // Sunsoft 5B channel class
 
 const int32_t EXP_VOLUME[32] = {
-	  0,   1,   1,   2,
-	  2,   3,   3,   4,
-	  5,   6,   7,   9,
-	 11,  13,  15,  18,
-	 22,  26,  31,  37,
-	 45,  53,  63,  76,
-	 90, 106, 127, 151,
-	180, 212, 255, 255
+	  0,   0,   2,   2,
+	  3,   3,   5,   5,
+	  7,   7,  11,  11,
+	 16,  16,  27,  27,
+	 32,  32,  52,  52,
+	 74,  74,  95,  95,
+	125, 125, 162, 162,
+	205, 205, 255, 255
 };
 
 CS5BChannel::CS5BChannel(CMixer *pMixer, uint8_t ID) : CChannel(pMixer, SNDCHIP_S5B, ID),
@@ -91,7 +91,7 @@ double CS5BChannel::GetFrequency() const		// // //
 {
 	if (m_bSquareDisable || !m_iPeriod)
 		return 0.;
-	return CAPU::BASE_FREQ_NTSC / 2. / m_iPeriod;
+	return CAPU::BASE_FREQ_NTSC / m_iPeriod; // from testing, this made no difference to the noise pitches
 }
 
 
